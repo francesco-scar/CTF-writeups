@@ -8,7 +8,7 @@ Category: Web Exploitation
 
 ## Write up:
 
-The challenge provides the link: https://knock-knock.mc.ax/
+The challenge provides the link: [knock-knock.mc.ax](https://knock-knock.mc.ax/)
 
 In the page you can create a new note and read existing ones (if you know the correct id and corresponding token).
 
@@ -85,7 +85,7 @@ We can observe that the flag is saved in the first note (so with id 0), if we fi
 The server checks if the given token is equal to the one generated for the given id with the following function
 
 ```js
-return crypto.createHmac('sha256', this.secret).update(id.toString()).digest('hex');
+crypto.createHmac('sha256', this.secret).update(id.toString()).digest('hex');
 ```
 
 where
@@ -95,7 +95,7 @@ this.secret = `secret-${crypto.randomUUID}`;
 
 The function `crypto.randomUUID()` returns a pseudo-random string, for example `fb5c81ab-c3ae-40c4-9586-29a7e459e263`, so we could think that `this.secret` will be an unpredictable random string similar to `secret-fb5c81ab-c3ae-40c4-9586-29a7e459e263`.
 
-But the code doesn't call `crypto.randomUUID()`, because there aren't the parenthesis and we can test that `secret-${crypto.randomUUID}` outputs the help message for the function, so the secret key will be the following string:
+But the code doesn't call `crypto.randomUUID()`, because there aren't the parenthesis and we can test that `secret-${crypto.randomUUID}` outputs the code of the function as text, so the secret key will be the following string:
 
 ```
 'secret-function randomUUID(options) {\n' +
