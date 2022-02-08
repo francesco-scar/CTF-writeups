@@ -1,12 +1,14 @@
-# DiceCTF knock-knock Write Up
+# DiceCTF knock-knock Writeup
 
-## Details:
+## Category
 
-Jeopardy style CTF
+Web Exploitation
 
-Category: Web Exploitation
+## Description
 
-## Write up:
+> Knock knock? Who's there? Another pastebin!!
+
+## Writeup
 
 The challenge provides the link: [knock-knock.mc.ax](https://knock-knock.mc.ax/)
 
@@ -98,17 +100,17 @@ The function `crypto.randomUUID()` returns a pseudo-random string, for example `
 But the code doesn't call `crypto.randomUUID()`, because there aren't the parenthesis and we can test that `secret-${crypto.randomUUID}` outputs the code of the function as text, so the secret key will be the following string:
 
 ```
-'secret-function randomUUID(options) {\n' +
-  '  if (options !== undefined)\n' +
-  "    validateObject(options, 'options');\n" +
-  '  const {\n' +
-  '    disableEntropyCache = false,\n' +
-  '  } = options || {};\n' +
-  '\n' +
-  "  validateBoolean(disableEntropyCache, 'options.disableEntropyCache');\n" +
-  '\n' +
-  '  return disableEntropyCache ? getUnbufferedUUID() : getBufferedUUID();\n' +
-  '}'
+secret-function randomUUID(options) {
+  if (options !== undefined)
+    validateObject(options, 'options');
+  const {
+    disableEntropyCache = false,
+  } = options || {};
+
+  validateBoolean(disableEntropyCache, 'options.disableEntropyCache');
+
+  return disableEntropyCache ? getUnbufferedUUID() : getBufferedUUID();
+}
 ```
 
 Having the constant secret key we can recreate the token corresponding to any id, in particular we can calculate the token for id 0:
