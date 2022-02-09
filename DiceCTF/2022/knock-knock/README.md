@@ -129,3 +129,7 @@ So the flag can be retrieved with the GET request `https://knock-knock.mc.ax/not
 ## Flag
 
 The page will respond with the flag `dice{1_d00r_y0u_d00r_w3_a11_d00r_f0r_1_d00r}`
+
+<hr>
+
+If you find errors or you want to contribute to this writeup go to the [GitHub repository](https://github.com/francesco-scar/CTF-writeups/tree/main/DiceCTF/2022/knock-knock) or contact me [opening an issue](https://github.com/francesco-scar/CTF-writeups/issues).

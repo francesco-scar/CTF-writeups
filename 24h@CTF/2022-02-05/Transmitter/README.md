@@ -54,4 +54,4 @@ Which decoded from hex to ascii chars give the flag:
 
 <hr>
 
-If you find errors or you want to contribute to this writeup go to the [GitHub repository](https://github.com/francesco-scar/CTF-writeups/tree/main/24h%40CTF/2022-02-05/Cassette_track_A) or contact me [opening an issue](https://github.com/francesco-scar/CTF-writeups/issues)
+If you find errors or you want to contribute to this writeup go to the [GitHub repository](https://github.com/francesco-scar/CTF-writeups/tree/main/24h%40CTF/2022-02-05/Transmitter) or contact me [opening an issue](https://github.com/francesco-scar/CTF-writeups/issues).
