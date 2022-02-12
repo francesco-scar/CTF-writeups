@@ -6,7 +6,7 @@ Blockchain
 
 ## Description
 
-The challenge give the text:
+The challenge gives the text:
 
 `0x7BB2B3F29faC32dd86b2B760ca180462b2E08e6E@Ropsten`
 
@@ -52,6 +52,6 @@ Which decoded from hex to ascii chars give the flag:
 
 `FLAG{W3LC0M3_T0_E7H3REUM_XX1CWhiW0dVf}`
 
-<hr>
+-----
 
 If you find errors or you want to contribute to this writeup go to the [GitHub repository](https://github.com/francesco-scar/CTF-writeups/tree/main/24h%40CTF/2022-02-05/Transmitter) or contact me [opening an issue](https://github.com/francesco-scar/CTF-writeups/issues).

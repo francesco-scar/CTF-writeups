@@ -56,6 +56,6 @@ The final result is the following and, with some patience and guessing, you can 
 
 `FLAG{W3lc0m3_t0_4ud10_St3G4n0gr4pHy}`
 
-<hr>
+-----
 
 If you find errors or you want to contribute to this writeup go to the [GitHub repository](https://github.com/francesco-scar/CTF-writeups/tree/main/24h%40CTF/2022-02-05/Cassette_track_A) or contact me [opening an issue](https://github.com/francesco-scar/CTF-writeups/issues).
