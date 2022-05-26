@@ -8,7 +8,7 @@ diff = ImageChops.difference(im1, im2)
 
 thresh = 8
 fn = lambda x : 255 if x > thresh else 0
-r = fiff.convert('L').point(fn, mode='1')
+r = diff.convert('L').point(fn, mode='1')
 r.save('diff_b_w.png')
 
 diff.save('diff.png') 
